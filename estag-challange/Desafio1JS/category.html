@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Categories</title>
+</head>
+<body>
+<nav>
+    <header><h1>Categories</h1></header>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="category.html">Categoria</a></li>
+        <li><a href="history.html">History</a></li>
+    </ul>
+</nav>
+<main class="content">
+    <div class="addproduct">
+    <form id="category-form">
+        <div class="inputscat">
+        <input name = "name" type="text" id="name" placeholder="Category name">
+        <input name = "tax" type="number" id="tax" placeholder="Tax" onkeypress="return event.charCode >= 48" min="1">
+        </div>
+        <button onclick="createCategory()" class="add" id="add-cat-but" name="add-cat-submit">Add Category</button>
+    </form>
+    </div>
+    <div class="cattable">
+    <table>
+        <thead>
+        <tr>
+            <td><b>Code</b></td>
+            <td><b>Category</b></td>
+            <td><b>Tax</b></td>
+        </tr>
+        </thead>
+        <tbody id="categories-list">
+        </tbody>
+    </table>
+</div>
+</main>
+<script src="category.js"></script>
+</body>
+</html>

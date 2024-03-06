@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product</title>
+</head>
+<body>
+<nav>
+    <header><h1>Products</h1></header>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="category.html">Categoria</a></li>
+        <li><a href="history.html">History</a></li>
+    </ul>
+</nav>
+<main class="content">
+    <div class="addproduct">
+    <form id="prod-form">
+        <div class="inputs">
+        <input name="name" type="text" id="p-name" placeholder="Product name" required>
+        <input name="amount" type="number" id="p-amount" placeholder="Amount" required onkeypress="return event.charCode >= 48" min="1" >
+        <input name="price" type="number" id="p-price" placeholder="Unit price" required min="1" step="any">
+        </div>
+        <div class="selectindex">
+        <select name="category" id="cat-prod-select">
+        </select>
+        </div>
+        <button name="add-prod-button" onclick="createProduct()" class="add" id="add-prod-button">Add Product</button>
+    </form>
+    </div>
+    <div class="productstable">
+    <table>
+        <thead>
+        <tr>
+            <td><b>Code</b></td>
+            <td><b>Product</b></td>
+            <td><b>Amount</b></td>
+            <td><b>Unit price</b></td>
+            <td><b>Category</b></td>
+        </tr>
+        </thead>
+        <tbody id="prod-list">
+        </tbody>
+    </table>
+    </div>
+</main>
+</body>
+</html>
+<script src="product.js"></script>

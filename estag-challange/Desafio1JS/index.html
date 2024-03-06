@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <header>
+            <h1><a href="index.html">Suite Store</h1></a>
+        </header>
+        <ul>
+            <li><a href="product.html"><b>Products</b></a></li>
+            <li><a href="category.html"><b>Categoria</b></a></li>
+            <li><a href="history.html"><b>History</b></a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="addproduct">
+            <form id="index-form">
+                <div class="selectindex">
+                    <select name="product" id="prod-cart-select">
+                        <option value="0">Product</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <input name="amount" type="text" id="c-amount" placeholder="Amount" onkeypress="return event.charCode >= 48" min="1">
+                    <input disabled type="number" name="tax" id="c-tax" placeholder="Tax">
+                    <input disabled type="number" name="price" id="c-price" placeholder="Price">
+                </div>
+                <button name="btn-add-cart" type="add" id="btn-add-cart"><b>Add Product</b></button>
+            </form>
+        </div>
+        <div class="cart">
+            <table>
+                <thead>
+                    <tr>
+                        <td><b>
+                                <h3>Product
+                            </b></h3>
+                        </td>
+                        <td><b>
+                                <h3>Unit price</h3>
+                            </b></td>
+                        <td><b>
+                                <h3>Amount</h3>
+                            </b></td>
+                        <td><b>
+                                <h3>Total</h3>
+                            </b></td>
+                    </tr>
+                </thead>
+                <tbody id="cart-list">
+                </tbody>
+            </table>
+            <div class="totals">
+                <div id="total-cart"></div>
+            </div>
+    </main>
+</body>
+
+</html>
+<script src="index.js"></script>
